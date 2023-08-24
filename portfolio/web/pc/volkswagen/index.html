@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+	<title>Volkswagen</title>
+	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" href="css/default.css">
+	<script src="js/swiper.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$(function(){
+			var swiper = new Swiper('.swiper-container', {
+			      navigation: {
+			        nextEl: '.swiper-button-next',
+			        prevEl: '.swiper-button-prev',
+			      },
+			      pagination: {
+			        el: '.swiper-pagination',
+			      },
+			    });
+
+			$(".menu").click(function(e){
+				e.preventDefault();
+				$(".nav").animate({left:0});
+				$(".menu_area").animate({left:300});
+			});
+			$(".close").click(function(){
+				$(".nav").animate({left:-300});
+				$(".menu_area").animate({left:0});
+				return false;
+			});
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<header>
+			<div class="header">
+				<!-- <div class="in"> -->
+					<nav class="nav">
+						<ul>
+							<li><a href="#">New cars</a></li>
+							<li><a href="#">Technology</a></li>
+							<li><a href="#">Owners & drivers</a></li>
+							<li><a href="#">Promotion & news</a></li>
+							<li><a href="#">VW approved caes</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+						<a href="#" class="close">close</a>   <!--  a태그에 제이쿼리적용하려면 클래스명지정. -->
+					</nav>
+					<div class="menu_area">
+						<span class="blind">menu</span>
+						<a href="#" class="menu">
+							<img src="images/menu.png" alt="menu">
+						</a>
+					</div>
+					<!-- </div> -->
+					<div class="visual_area">
+						<div class="swiper-container">
+						    <div class="swiper-wrapper">
+						      <div class="swiper-slide">
+						      	<div class="pic_area"></div>
+						      	<div class="visual_txt">
+									<h1>The new Passat GT</h1>
+									<div class="btn">
+										<a href="#">자세히보기</a>
+									</div>
+								</div>
+						      </div> <!-- 01 -->
+						      <div class="swiper-slide">
+						      	<div class="pic_area arteon"></div>
+						      	<div class="visual_txt">
+									<h1>The new Arteon</h1>
+									<div class="btn">
+										<a href="#">출시</a>
+									</div>
+								</div>
+						      </div> <!-- 02 -->
+						      <div class="swiper-slide">
+						      	<div class="pic_area jetta"></div>
+						      	<div class="visual_txt">
+									<h1>The all-new Jetta</h1>
+									<div class="btn">
+										<a href="#">출시</a>
+									</div>
+								</div>
+						      </div>
+						    </div>
+					    <!-- Add Arrows -->
+						    <div class="swiper-button-next"></div>
+						    <div class="swiper-button-prev"></div>
+						    <!-- Add Pagination -->
+    						<div class="swiper-pagination"></div>
+					   </div>
+					</div><!--  visual_area -->
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="content">
+				<div class="in">
+					<div class="new-area">
+						<ul class="new cl" >
+							<li>
+								<div class="new_pic">
+									<img src="images/01.jpg" alt="">
+								</div>
+								<div class="new_txt passat">
+									<p>New Gentle.</p>
+									<h2>The new Passat GT 출시</h2>
+								</div>
+							</li>
+							<li>
+								<div class="new_pic">
+									<img src="images/02.jpg" alt="">
+								</div>
+								<div class="new_txt arteon">
+									<p>4Motion 출시</p>
+									<h2>The Arteon</h2>
+								</div>
+							</li>
+							<li>
+								<div class="new_pic">
+									<img src="images/03.jpg" alt="">
+								</div>
+								<div class="new_txt jetta">
+									<p>제대로 타다.</p>
+									<h2>The all-new Jetta</h2>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="pick_car">
+						<h2>Welcome to Volkswagen</h2>
+						<div class="car_pic">
+							<img src="images/04.jpg" alt="">
+						</div>
+						<div class="car_txt">
+							<p>Choose Color</p>
+							<ul class="color_area cl">
+								<li class="color_b"></li>
+								<li class="color_n"></li>
+								<li class="color_r"></li>
+								<li class="color_g"></li>
+							</ul>
+						</div>
+					</div>
+				</div> <!-- in End -->
+				<div class="comfort_area">
+					<div class="in">
+						<div class="comfort">
+							<h3>Comfort and Convenience</h3>
+							<ul class="cl">
+								<li>
+									<a href="#">
+										<div class="pic">
+											<img src="images/05.jpg" alt="Exterior">
+										</div>
+										<div class="mask ext">
+											<div class="txt">
+												<h3>Exterior</h3>
+												<p>5 photo</p>
+											</div>
+										</div>
+									</a>
+								</li> <!--  li 01 End -->
+								<li>
+									<a href="#">
+										<div class="pic">
+											<img src="images/06.jpg" alt="Interior">
+										</div>
+										<div class="mask int">
+											<div class="txt">
+												<h3>Interior</h3>
+												<p>7 photo</p>
+											</div>
+										</div>
+									</a>
+								</li> <!--  li 02 End -->
+								<li>
+									<a href="#">
+										<div class="pic">
+											<img src="images/07.jpg" alt="Videos">
+										</div>
+										<div class="mask vid">
+											<div class="txt">
+												<h3>Videos</h3>
+												<p>5 videos</p>
+											</div>
+										</div>
+									</a>	
+								</li> <!--  li 03 End -->
+								<li>
+									<a href="#">
+										<div class="pic">
+											<img src="images/08.jpg" alt="Overview">
+										</div>
+										<div class="mask ove">
+											<div class="txt">
+												<h3>Overview</h3>
+												<p>2021 New</p>
+											</div>
+										</div>
+									</a>
+								</li> <!--  li 04 End -->
+							</ul>
+						</div> <!-- comfort End -->
+					</div> <!-- in End -->
+				</div> <!-- comfort_area End -->
+			</div>
+		</main>
+		<footer>
+			<div class="info">
+				<div class="in">
+					<div class="info_txt">
+						<ul cl>
+							<li>
+								<a href="#">HOME</a>
+							</li>
+							<li>
+								<a href="#">CONTACT US</a>
+							</li>
+							<li>
+								<a href="#">SITE MAP</a>
+							</li>
+							<li>
+								<a href="#">개인정보처리방침</a>
+							</li>
+						</ul>
+					</div>
+					<div class="search_area">
+						<form action="#">
+							<fieldset>
+								<legend class="blind">검색</legend>
+								<div class="search">
+									<input type="text" placeholder="Enter Search Terms" autofocus="">
+								</div>
+								<button id="search_btn">
+									<span class="blind">검색</span>  
+									<span>SERACH</span>
+								</button>
+							</fieldset>
+						</form>
+					</div> <!-- search_area End -->
+				</div> <!-- in End -->
+			</div> <!-- nfo End -->
+			<div class="footer_txt">
+				<div class="in">
+					<small>Copyright &copy; Volkswagen 2021 </small>
+					<span>안내사항 Volkswagen</span>
+					<span>* 본 페이지 내 게재 된 이미지는 국내 적용되는 사양과 다를 수 있습니다.</span>
+					<span>* 본 페이지 내 게재 된 연비는 표준모드에 의한 연비로서 도로 상태, 운전 방법, 차량 적재, 정비 상태 및 외기 온도 등에 따라 실주행 연비와 차이가 있습니다.</span>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
+

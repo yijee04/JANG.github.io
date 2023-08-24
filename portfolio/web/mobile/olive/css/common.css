@@ -1,0 +1,98 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+body {line-height:1; -webkit-text-size-adjust:none; text-size-adjust:none;}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {display:block;}
+ul {list-style:none;}
+
+a {margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration:none;
+  }
+table {border-collapse:collapse; border-spacing:0;}
+input, button{vertical-align:middle; border:0; outline:0; background:transparent;
+ /*브라우저마다 다른 폼태그 디자인을 안보이게하는 속성*/ /*ios에서 폼태그의 모서리를 둥글게 하지못하게 함*/
+  -webkit-appearance:none; appearance:none; /*border-radius:none;*/}
+
+  
+img, video, iframe{border:0; outline:0; max-width:100%;}
+a, span, strong{display:inline-block; color:inherit;}
+strong{font-weight:400;}
+.cl::before{content:""; display:block;}
+.cl::after{content:""; display:block; clear:both;}
+.blind{position:absolute; width:0; height:0; display:block; line-height:0;
+       overflow:hidden;}
+html{font-size:14px;}
+html, body{width:100%; height:100%;}
+body{font-size:14px; color:#4d5d59; font-family: 'Noto Sans KR', sans-serif;
+     word-wrap:break-word; word-break:keep-all; /*overflow:hidden;*/}
+
+.header{position:relative; z-index:9999;}
+.header_in{text-align:center; position:relative; padding:25px 0;}
+.logo{ text-align:center;}
+.logo a{width:51.73333333333333%;}
+.menu_wrap{position:absolute; top:28px; right:/*30px*/8%;}
+.menu_wrap .menu_link{font-size:0px; color:transparent; width:16px; height:14px;
+          padding:5px; background:url(../images/common/btn_menu.png) no-repeat;}
+
+/*navigation*/
+.gnb{position:fixed; right:-100%; top:0; width:100%; height:100%; min-height:100%;
+     background:#eaeaea; overflow:hidden; z-index:10000;}
+.gnb_header{background:#fbe5f6; position:relative; padding:15px 20px;}
+.gnb_logo{width:50%; margin-left:24.33333333333333%;}
+.btn_close{width:20px; height:20px; position:absolute; right:15px; top:37px;
+          font-size:0; color:transparent; line-height:0; 
+          background:url(../images/main/menu_close_1.png) no-repeat; padding:5px; background-size:16px}
+.gnb_list li{position:relative;}
+.gnb_list li .tit{position:relative; color:#4d5d59; font-size:15px;
+padding:15px 20px; border-bottom:1px solid #c5c3c4;}
+.gnb_list li .iconh::before{content:""; display:inline-block; width:24px; height:21px;
+     vertical-align:middle; background:url(../images/main/btn_home.png) no-repeat center; margin-right:5px;
+     background-size:24px 21px;}
+.gnb_list li .btn_open{position:absolute; right:26px; top:12px;}
+.gnb_list li .btn_open .open{background:url(../images/main/btn_open.png) no-repeat center; width:20px; height:20px;}
+.lnb{background:#d6d7d7; border-bottom:1px solid #c3c3c4; text-indent:10px; display:none;}
+.lnb li a{padding:12px 15px; color:#0f0f0f;}
+
+/*제이쿼리*/
+.gnb_list li .tit.on{background:#a9a9a9;}
+.gnb_list li .tit.on .open{width:20px; height:1px; background:url(../images/main/btn_minus.png)no-repeat center;}
+
+
+/*footer*/
+.footer_row{padding:10px; font-size:13px;}
+.finfo{background:#776c75;}
+.finfo .menu{width:300px;}
+.finfo .menu li{float:left; margin-left:10px;}
+.finfo .menu li a{color:#fff;}
+
+.flegal{background:#e0e1e1;}
+.flegal .legal{width:100%;}
+.flegal .legal li{float:left; padding-right:5px; padding-bottom:10px;} 
+.flegal .legal li a{color:#333333;}
+
